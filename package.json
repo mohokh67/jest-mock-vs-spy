@@ -5,14 +5,15 @@
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build": "pnpm run lint && tsup src/**/*.ts --format cjs,esm --dts",
+        "build": "npm run lint && tsup src/**/*.ts --format cjs,esm --dts",
         "clean": "rimraf dist",
         "lint": "tsc",
         "test": "jest --detectOpenHandles --colors --runInBand --verbose"
     },
     "dependencies": {
+        "pnpm": "^8.13.1",
+        "ts-node": "^10.9.2"
     },
-
     "devDependencies": {
         "@types/jest": "^29.5.0",
         "@types/node": "^18.15.3",
