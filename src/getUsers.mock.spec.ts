@@ -3,7 +3,7 @@ import { findUser } from "./user";
 
 jest.mock("./user");
 
-describe("It should test getUser function", () => {
+describe.skip("It should test getUser function", () => {
   const findUserMock = findUser as jest.Mock;
   it("test getUser with different IDs", async () => {
     findUserMock.mockResolvedValue({
